@@ -11,15 +11,10 @@ body{margin:0;min-height:100vh;font-family:Inter,Arial,Helvetica,sans-serif;back
 .logo{width:100%;max-width:300px;height:auto;margin:0 auto 28px;display:block}
 h1{margin:0;font-size:30px;font-weight:750;letter-spacing:-.6px;color:#003f6b}
 .position{margin-top:16px;font-size:16px;font-weight:600;color:#003f6b}
-.department{margin-top:6px;font-size:14px;color:rgba(0,63,107,.62);line-height:1.5}
 .company{margin-top:8px;font-size:15px;color:rgba(0,63,107,.72);line-height:1.5}
-.slogan{margin:22px 0 0;font-size:14px;line-height:1.55;color:rgba(0,63,107,.62)}
 .buttons{display:flex;flex-direction:column;gap:12px;margin-top:26px}
 .button{display:block;width:100%;padding:15px 18px;border-radius:15px;text-decoration:none;background:#004b7f;color:#fff;font-size:15px;font-weight:700;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .secondary{background:#eef4f8;color:#004b7f;border:1px solid rgba(0,75,127,.12)}
-.wechat-panel{display:none;margin-top:-4px;padding:14px 12px;border-radius:14px;background:#f7fafc;border:1px solid rgba(0,75,127,.1);color:#003f6b;font-size:14px;line-height:1.5}
-.wechat-panel strong{font-size:16px;letter-spacing:.2px}
-.copy-button{margin-top:10px;width:100%;padding:11px 14px;border-radius:12px;border:none;background:#004b7f;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
 .contact-line{margin-top:22px;font-size:13px;color:rgba(0,63,107,.58);line-height:1.7;word-break:break-word}
 .footer{margin-top:24px;font-size:12px;line-height:1.5;color:rgba(0,63,107,.42)}
 </style>
@@ -31,19 +26,10 @@ h1{margin:0;font-size:30px;font-weight:750;letter-spacing:-.6px;color:#003f6b}
 
   <h1>Xing Peng</h1>
   <div class="position">Director</div>
-  <div class="department">International Marketing Center</div>
-  <div class="company">Baiyun Power Group<br>白云电气集团有限公司</div>
-  <div class="slogan">Practitioner and Pioneer in Green and Smart Energy</div>
+  <div class="company">International Marketing Center</div>
 
   <div class="buttons">
     <a class="button" href="Xing-Peng.vcf">Save Contact</a>
-
-    <button class="button secondary" type="button" onclick="toggleWeChat()">WeChat</button>
-    <div id="wechatPanel" class="wechat-panel">
-      WeChat ID: <strong id="wechatId">xpgoal</strong>
-      <button class="copy-button" type="button" onclick="copyWeChat()">Copy WeChat ID</button>
-    </div>
-
     <a class="button secondary" href="https://wa.me/8613560266608" target="_blank" rel="noopener">WhatsApp</a>
     <a class="button secondary" href="mailto:xing.peng@bpgint.com">Email</a>
     <a class="button secondary" href="https://www.baiyunpower.com" target="_blank" rel="noopener">Company Website</a>
@@ -51,8 +37,7 @@ h1{margin:0;font-size:30px;font-weight:750;letter-spacing:-.6px;color:#003f6b}
 
   <div class="contact-line">
     +86 135 6026 6608<br>
-    xing.peng@bpgint.com<br>
-    pengx@bpgroup.com.cn
+    xing.peng@bpgint.com
   </div>
 
   <div class="footer">
@@ -60,23 +45,5 @@ h1{margin:0;font-size:30px;font-weight:750;letter-spacing:-.6px;color:#003f6b}
     Guangzhou, China
   </div>
 </main>
-
-<script>
-function toggleWeChat(){
- const panel=document.getElementById("wechatPanel");
- panel.style.display = panel.style.display === "block" ? "none" : "block";
-}
-
-function copyWeChat(){
- const text=document.getElementById("wechatId").innerText;
- if(navigator.clipboard){
-   navigator.clipboard.writeText(text)
-     .then(()=>alert("WeChat ID copied: "+text))
-     .catch(()=>alert("WeChat ID: "+text));
- } else {
-   alert("WeChat ID: "+text);
- }
-}
-</script>
 </body>
 </html>
